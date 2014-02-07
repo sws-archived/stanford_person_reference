@@ -10,15 +10,15 @@
 function stanford_person_reference_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-stanford_event-field_s_all_entityref_person'
-  $field_instances['node-stanford_event-field_s_all_entityref_person'] = array(
-    'bundle' => 'stanford_event',
+  // Exported field_instance: 'node-stanford_publication-field_s_person_link'
+  $field_instances['node-stanford_publication-field_s_person_link'] = array(
+    'bundle' => 'stanford_publication',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'This optional field links a content object (i.e. course, publication, etc.) with particular person profile(s) on this website. For a publication, this would be the author, for a course this would be the instructor, etc. Begin typing a name, and the system will suggest options that match. Click on the appropriate name, and Save this page to build a reference between this page and a person. This field allows for complex data queries, and other interesting things.',
+    'description' => 'This displays the people associated with profiles website. Begin typing a name and it will autocomplete.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
           'link' => FALSE,
@@ -34,8 +34,8 @@ function stanford_person_reference_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_s_all_entityref_person',
-    'label' => 'Associated Person',
+    'field_name' => 'field_s_person_link',
+    'label' => 'Author link',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -49,14 +49,14 @@ function stanford_person_reference_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 14,
+      'weight' => 4,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Associated Person');
-  t('This optional field links a content object (i.e. course, publication, etc.) with particular person profile(s) on this website. For a publication, this would be the author, for a course this would be the instructor, etc. Begin typing a name, and the system will suggest options that match. Click on the appropriate name, and Save this page to build a reference between this page and a person. This field allows for complex data queries, and other interesting things.');
+  t('Author link');
+  t('This displays the people associated with profiles website. Begin typing a name and it will autocomplete.');
 
   return $field_instances;
 }

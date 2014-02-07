@@ -10,13 +10,13 @@
 function stanford_person_reference_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_s_all_entityref_person'
-  $field_bases['field_s_all_entityref_person'] = array(
+  // Exported field_base: 'field_s_person_link'
+  $field_bases['field_s_person_link'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_s_all_entityref_person',
+    'field_name' => 'field_s_person_link',
     'foreign keys' => array(
       'node' => array(
         'columns' => array(
@@ -41,16 +41,12 @@ function stanford_person_reference_field_default_field_bases() {
           ),
         ),
         'sort' => array(
-          'direction' => 'ASC',
-          'field' => 'body:value',
-          'property' => 'nid',
           'type' => 'none',
         ),
         'target_bundles' => array(
           'stanford_person' => 'stanford_person',
         ),
       ),
-      'handler_submit' => 'Change handler',
       'target_type' => 'node',
     ),
     'translatable' => 0,
